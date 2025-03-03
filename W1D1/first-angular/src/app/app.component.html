@@ -1,0 +1,18 @@
+<h1> {{title}} </h1>
+<my-component [parentTitle]="title" (notifyParent)="onNotify($event)"></my-component>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>#Pages</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let oneBook of allBooks">
+            <td> {{oneBook.id}} </td>
+            <td>{{oneBook.title}}</td>
+            <td>{{oneBook.nbPages}}</td>
+        </tr>
+    </tbody>
+</table>
