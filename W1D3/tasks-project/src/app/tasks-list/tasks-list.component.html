@@ -1,0 +1,21 @@
+<div *ngIf="tasks.length">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td>{{task.title}}</td>
+            <td>{{task.dueDate}}</td>
+            <td>{{task.priority}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div *ngIf="!tasks.length">
+<p>No tasks available</p>
+</div>

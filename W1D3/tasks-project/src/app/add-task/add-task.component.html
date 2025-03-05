@@ -1,0 +1,20 @@
+<h1 class="mx-5">New Task</h1>
+<form class="col-4 mx-5" (ngSubmit)="addTask()">
+    <label for="title">Title</label>
+    <input class="form-control" type="text" name="title" [(ngModel)]="newTask.title">
+    <p class="text-danger"  *ngIf="errorMessage.title"> {{errorMessage.title.message}} </p>
+    <label for="content">content</label>
+    <textarea class="form-control" name="content" [(ngModel)]="newTask.content"></textarea>
+    <p class="text-danger" *ngIf="errorMessage.content"> {{errorMessage.content.message}} </p>
+    <label for="priority">priority</label>
+    <select class="form-select" name="priority" [(ngModel)]="newTask.priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    <p class="text-danger"  *ngIf="errorMessage.priority"> {{errorMessage.priority.message}} </p>
+    <label for="dueDate">dueDate</label>
+    <input class="form-control" type="date" name="dueDate" [(ngModel)]="newTask.dueDate">
+    <p class="text-danger"  *ngIf="errorMessage.dueDate"> {{errorMessage.dueDate.message}} </p>
+    <button class="btn btn-primary w-100" type="submit">Add Task</button>
+</form>
