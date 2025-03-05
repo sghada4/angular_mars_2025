@@ -219,4 +219,6 @@ export class AddItemComponent {
   font-weight: bold;
 }
 ```
-
+---
+##Assignments
+Please make sure to convert the "Books" assignment (available on the learning platform) and the Code Review assignment into Angular projects.
