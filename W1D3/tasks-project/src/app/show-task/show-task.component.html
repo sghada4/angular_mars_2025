@@ -1,0 +1,10 @@
+<div *ngIf="task">
+    <p> {{task.title}} </p>
+    <p> {{task.content}} </p>
+    <p> {{task.priority}} </p>
+    <p> {{task.dueDate.split('T')[0]}} </p>
+
+</div>
+<div *ngIf="!task">
+<p>No Task Available</p>
+</div>

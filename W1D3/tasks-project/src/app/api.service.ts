@@ -22,4 +22,18 @@ export class ApiService {
   private handleError(err: any): Observable<any>{
     return throwError(()=> err.error.errors);
   }
+
+  deleteTask(id: string): Observable<any>{
+    return this.http.delete(`${this.baseUrl}/tasks/${id}`)
+  }
+
+  getTaskById(id: string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/tasks/${id}`);
+  }
+
+  editTask(data: Task): Observable<any>{
+    return this.http
+      .put(`${this.baseUrl}/tasks/${data._id}`, data)
+      .pipe(catchError(this.handleError));
+  }
 }

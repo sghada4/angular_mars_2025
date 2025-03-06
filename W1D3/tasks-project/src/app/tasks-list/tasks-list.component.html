@@ -5,6 +5,7 @@
             <th>Title</th>
             <th>Due Date</th>
             <th>Priority</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -12,6 +13,11 @@
             <td>{{task.title}}</td>
             <td>{{task.dueDate}}</td>
             <td>{{task.priority}}</td>
+            <td>
+                <a routerLink="/show/{{task._id}}">View</a> | 
+                <a routerLink="/edit/{{task._id}}">Edit</a> | 
+                <a href="" (click)="deleteTask(task._id)">Delete</a> 
+            </td>
         </tr>
     </tbody>
 </table>

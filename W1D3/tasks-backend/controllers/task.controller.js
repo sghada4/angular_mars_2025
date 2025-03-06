@@ -38,7 +38,11 @@ const createTask=async(req,res)=>{
 // update 
 const updateTask = async (req, res) => {
     try {
-      const task = await Task.findByIdAndUpdate(req.params.id, { ...req.body, updatedAt: new Date() }, { new: true });
+      const task = await Task.findByIdAndUpdate(
+        req.params.id,
+        { ...req.body, updatedAt: new Date() },
+        { new: true, runValidators: true }
+      );
       if (task) {
         res.json(task);
       } else {
