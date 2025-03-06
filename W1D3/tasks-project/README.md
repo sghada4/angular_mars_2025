@@ -422,3 +422,6 @@ export class ItemListComponent {
   }
 }
 ```
+### **Assignments**  
+
+Please continue converting the "Books" assignment (available on the learning platform) and the Code Review assignment into Angular projects. Make sure to include "Show One," "Update," and "Delete" functionalities.
